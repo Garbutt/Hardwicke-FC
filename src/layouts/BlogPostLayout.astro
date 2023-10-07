@@ -1,0 +1,73 @@
+---
+import Layout from "./Layout.astro";
+import { slugify, fromatDate } from "../js/utils";
+const { frontmatter } = Astro.props;
+import { Image } from "astro:assets";
+const { title, description, date, category, author, image } = frontmatter;
+import trebleWinners from "../../public/images/blog-post-1.png";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout {title} />
+<header>
+  <div class="container">
+    <small>
+      <a href={`/category/${slugify(category)}/`} class="badge">{category}</a>
+    </small>
+    <h1 class="heading">{title}</h1>
+    <p class="text">
+      by <a href={`/author/${slugify(author)}/`}>{author}</a> • {
+        fromatDate(date)
+      }
+    </p>
+    <img src="" alt="" />
+    <div class="post-content">
+      <Image class="trebble-winners" src={trebleWinners} alt={image.alt} />
+      <div class="content">
+        <slot />
+      </div>
+    </div>
+    <div class="sidebar"></div>
+  </div>
+</header>
+<Footer />
+<style>
+  small {
+    display: flex;
+  }
+  .badge {
+    display: flex;
+    color: var(--text-color-dark);
+    text-decoration: none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+  }
+
+  .heading {
+    color: var(--main-color);
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+  }
+
+  .text {
+    text-align: center;
+    color: var(--text-color-dark);
+  }
+
+  .content {
+    text-align: center;
+    color: var(--text-color-dark);
+  }
+
+  .trebble-winners {
+    display: flex;
+    width: 80%;
+    height: auto;
+    border: solid 5px var(--secondary-color);
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
