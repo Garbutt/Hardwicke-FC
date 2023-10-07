@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+import About from "../components/About.astro";
+import LiddyCup from "../components/LiddyCup.astro";
+import Coaches from "../components/Coaches.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Hardwicke FC" />
+<!---Top of home page -->
+<div class="container">
+  <div class="gap-for-text">
+    <h2>Hardwicke Football Club</h2>
+  </div>
+
+  <div class="image">
+    <img
+      class="main-background-image"
+      src="../public/images/background-image.png"
+      alt=""
+    />
+    <div class="gap-for-text"><h2>Est 2004</h2></div>
+  </div>
+</div>
+<!---About Us -->
+<About />
+<!---Liddy Cup Winners -->
+<LiddyCup />
+<!---Our Coaches -->
+<Coaches />
+<!---Footer -->
+<Footer />
+<style>
+  .container {
+    width: 100%;
+  }
+  .gap-for-text {
+    width: 100%;
+    height: 60px;
+    background-color: var(--secondary-color);
+    display: flex;
+  }
+
+  .main-background-image {
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    display: block;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  /*media*/
+  @media only screen and (min-width: 701px) {
+    h2 {
+      font-size: 36px;
+    }
+  }
+</style>

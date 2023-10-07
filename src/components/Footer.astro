@@ -1,0 +1,23 @@
+<div class="footer">
+  <p>&copy; Hardwicke FC <span id="year"></span></p>
+</div>
+<script>
+  const yearElement = document.getElementById("year");
+  if (yearElement) {
+    yearElement.innerHTML = new Date().getFullYear().toString();
+  }
+</script>
+<style>
+  .footer {
+    display: flex;
+    width: 100%;
+    background-color: var(--secondary-color);
+    height: 80px;
+  }
+
+  p {
+    color: var(--text-color-light);
+    font-size: 24px;
+    margin: auto;
+  }
+</style>
