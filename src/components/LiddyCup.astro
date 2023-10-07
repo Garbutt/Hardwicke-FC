@@ -1,54 +1,61 @@
+---
+import { Image } from "astro:assets";
+import liddyCupWinners from "/public/images/liddy-cup-winners.png";
+---
+
 <div class="container">
   <div class="content">
     <div class="img-container">
-      <img
+      <Image
         class="liddy-cup-winners"
-        src="../src/images/liddy-cup-winners.png"
-        alt=""
-      />
+        src={liddyCupWinners}
+        alt="Hardwicke FC are the Liddy Cup Winners 2023"
+      /></div>
+      <h3>Liddy Cup Winners 2023!</h3>
+      <p>
+        What a game of football this was for Hardwicke FC vs Phoenix FC.
+        Hardwicke wore down 1-0 in the 16th minute and Ryan King equalised less
+        than two minutes later. Both teams had many chances for the rest of the
+        first half and the second half and both defences stood tall. This led to
+        a penalty shootout were Hardwicke won 6-5 and the equalising goalscorer,
+        Ryan King stood up and burried the final peno in the bottom right
+        corner. What a way to do it!
+        <br /><br />
+
+         Matchday sponsor : Horizon Windows.
+      </p>
     </div>
-    <h3>Liddy Cup Winners 2023!</h3>
-    <p>
-      What a game of football this was for Hardwicke FC vs Phoenix FC. Hardwicke
-      wore down 1-0 in the 16th minute and Ryan King equalised less than two
-      minutes later. Both teams had many chances for the rest of the first half
-      and the second half and both defences stood tall. This led to a penalty
-      shootout were Hardwicke won 6-5 and the equalising goalscorer, Ryan King
-      stood up and burried the final peno in the bottom right corner. What a way
-      to do it!
-      <br /><br />
-
-       Matchday sponsor : Horizon Windows.
-    </p>
   </div>
-</div>
 
-<style>
-  .container {
-    height: 100%;
-    background-color: var(--third-color);
-  }
-
-  .img-container {
-    display: flex;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .liddy-cup-winners {
-    width: 100%;
-    border: solid 5px var(--secondary-color);
-  }
-
-  h3,
-  p {
-    color: var(--text-color-dark);
-  }
-  /*media*/
-  @media only screen and (min-width: 701px) {
-    .content {
-      padding-bottom: 2%;
+  <style>
+    .container {
+      height: 100%;
+      background-color: var(--third-color);
+      display
     }
-  }
-</style>
+
+    .img-container {
+      display: flex;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      
+    }
+
+    .liddy-cup-winners {
+      width: 100%;
+      border: solid 5px var(--secondary-color);height: 100%;
+    }
+
+    h3,
+    p {
+      color: var(--text-color-dark);
+    }
+    /*media*/
+    @media only screen and (min-width: 701px) {
+      .content {
+        padding-bottom: 2%;
+      }
+    }
+  </style>
+

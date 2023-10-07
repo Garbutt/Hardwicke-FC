@@ -1,7 +1,12 @@
+---
+import { Image } from "astro:assets";
+import logo from "/public/images/Hardwicke logo.png";
+---
+
 <div class="navbar">
   <div class="bigger-screens">
     <div class="logo-img">
-      <img class="logo" src="../src/images/Hardwicke Logo.png" alt="" />
+      <Image class="logo" src={logo} alt="Hardwicke FC logo" />
     </div>
     <div class="links">
       <ul>
@@ -34,6 +39,7 @@
   }
   .logo {
     width: 60px;
+    height: auto;
   }
   .navbar {
     width: 100%;
@@ -187,11 +193,16 @@
     .nav {
       height: 60px;
     }
-
+    .logo-img {
+      display: flex;
+      justify-content: end;
+      height: 100%;
+    }
     .logo {
-      float: right;
-      margin-top: 2.5%;
-      margin-right: 5%;
+      display: flex;
+      margin-top: 10px;
+
+      margin-right: 2%;
     }
 
     .text-float {

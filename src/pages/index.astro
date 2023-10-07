@@ -4,6 +4,8 @@ import About from "../components/About.astro";
 import LiddyCup from "../components/LiddyCup.astro";
 import Coaches from "../components/Coaches.astro";
 import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
+import backgroundImage from "/public/images/background-image.png";
 ---
 
 <Layout title="Hardwicke FC" />
@@ -14,10 +16,10 @@ import Footer from "../components/Footer.astro";
   </div>
 
   <div class="image">
-    <img
+    <Image
       class="main-background-image"
-      src="../src/images/background-image.png"
-      alt=""
+      src={backgroundImage}
+      alt="Hardwicke FC first team"
     />
     <div class="gap-for-text"><h2>Est 2004!</h2></div>
   </div>
