@@ -4,10 +4,7 @@ title: Hardwicke FC win the Treble
 date: 2023-07-10
 author: Anthony Perry
 image:
-  {
-    src: "../../../public/images/blog-post-1.jpg",
-    alt: "The team celebrating the win",
-  }
+  { src: "/../images/blog-post-1.png", alt: "The team celebrating the win" }
 description: Hardwicke FC win the treble with a nail biting season.
 draft: false
 category: Trophies

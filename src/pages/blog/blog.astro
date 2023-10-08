@@ -1,17 +1,16 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+const allPost = await Astro.glob("./*.md");
+
+import PostCard from "../../components/PostCard.astro";
+import trebleWinners from "../../images/blog-post-1.png";
 ---
 
 <Layout title="Our Blog" />
-<ul>
-  <a href="../post-1">Post 1</a>
-  <a href="../post-1">Post 2</a>
-  <a href="../post-1">Post 3</a>
-  <a href="../post-1">Post 4</a>
-</ul>
-
-<style>
-  a {
-    display: block;
-  }
-</style>
+<!-- {allPost.map((post) => <PostCard {post} />)} -->
+<PostCard
+  frontmatter={allPost[0].frontmatter}
+  url={allPost[0].url}
+  image={allPost[0].frontmatter.image.src}
+/>
+<style></style>
