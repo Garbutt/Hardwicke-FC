@@ -1,0 +1,48 @@
+---
+const title = "Hardwicke FC win the Treble";
+const date = "07/10/2023";
+const author = "Reece Farrell";
+import postImage from "../../../src/images/website-blog.png";
+const description = "Hardwicke FC win the treble with a nail biting season.";
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Hardwicke FC Win The Treble" />
+
+<header class="container">
+  <div class="content">
+    <h2 class="heading">{title}</h2>
+    <p class="text">by {author} • {date}</p>
+    <Image class="image" src={postImage} alt="New Website Made For Hardwicke" />
+    <p class="text">
+      The new and official website for Hardwicke FC has now launched bringing
+      you information on the team, players and coaches.
+    </p>
+  </div>
+</header>
+<Footer />
+<style>
+  .heading {
+    color: var(--main-color);
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+  }
+
+  .text {
+    text-align: center;
+    color: var(--text-color-dark);
+  }
+
+  .image {
+    display: flex;
+    width: 80%;
+    height: auto;
+    border: solid 5px var(--secondary-color);
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>

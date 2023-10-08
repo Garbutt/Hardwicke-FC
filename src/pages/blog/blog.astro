@@ -1,16 +1,99 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-const allPost = await Astro.glob("./*.md");
-
-import PostCard from "../../components/PostCard.astro";
 import trebleWinners from "../../images/blog-post-1.png";
+import { Image } from "astro:assets";
+import Footer from "../../components/Footer.astro";
+import liddyCupWinners from "../../images/liddy-cup-winners.png";
+import websiteBlog from "../../images/website-blog.png";
 ---
 
 <Layout title="Our Blog" />
-<!-- {allPost.map((post) => <PostCard {post} />)} -->
-<PostCard
-  frontmatter={allPost[0].frontmatter}
-  url={allPost[0].url}
-  image={allPost[0].frontmatter.image.src}
-/>
-<style></style>
+<!---Post 1 -->
+<article>
+  <small>1 Minute Read</small>
+  <a href="post-1.html">
+    <Image
+      class="image-design"
+      src={trebleWinners}
+      alt="Hardwicke FC win the treble"
+    />
+    <div class="content">
+      <h1 class="heading">Hardwicke win the treble</h1>
+      <p class="text">by Anthoy perry - 09/10/2023</p>
+    </div>
+  </a>
+</article>
+<!---Post 2 -->
+<article>
+  <small>2 Minute Read</small>
+  <a href="post-3.html">
+    <Image
+      class="image-design"
+      src={liddyCupWinners}
+      alt="Hardwicke FC win the treble"
+    />
+    <div class="content">
+      <h1 class="heading">Hardwicke win the Liddy Cup</h1>
+      <p class="text">by Anthoy perry - 09/10/2023</p>
+    </div>
+  </a>
+</article>
+
+<!---Post 3 -->
+<article>
+  <small>2 Minute Read</small>
+  <a href="post-3.html">
+    <Image
+      class="image-design"
+      src={websiteBlog}
+      alt="Hardwicke FC win the treble"
+    />
+    <div class="content">
+      <h1 class="heading">Hardwicke FC New Website</h1>
+      <p class="text">by Reece Farrell - 07/10/2023</p>
+    </div>
+  </a>
+</article>
+<!---Footer -->
+<Footer />
+<!---Style -->
+<style>
+  article {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    border: 5px solid var(--secondary-color);
+    border-radius: 5%;
+    background-color: var(--main-color);
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    color: var(--text-color-light);
+  }
+
+  .image-design {
+    display: flex;
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid var(--secondary-color);
+    border-radius: 5%;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    text-align: center;
+  }
+  a {
+    color: var(--text-color-light);
+  }
+  small {
+    text-align: center;
+    margin: 5%;
+    color: var(--text-color-light);
+  }
+</style>
