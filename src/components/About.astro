@@ -3,28 +3,30 @@ import { Image } from "astro:assets";
 import trophyImage from "../images/trophy-about-us.png";
 ---
 
-<div class="container">
-  <div class="content"></div>
+<header>
+  <div class="container">
+    <div class="content"></div>
 
-  <Image class="trophy-image" src={trophyImage} alt="Trophy" />
-  <div class="text">
-    <h3>About Us</h3>
-    <p>
-      Founded in 2004, Hardwicke is one of the top football teams in Dublin City
-      Center playing in the Premier A division in the AUL. We are based in
-      Hardwicke Street flats in Dublin 1 in the north inner-city and play our
-      matches in Dublin Port Stadium (Stella Maris).<br />
-      <br />Winning the league in the 2021/2022 season, Hardwicke have many
-      accomplishments as an inner-city football club and we bring brilliance to
-      the pitch every single game we play. Hardwicke will continue to deliver
-      excellence with our very wide range of highly skilled players.<br /><br
-      />Hardwicke have won 10 league titles and 14 cups and continue to push to
-      add more to the tally.<br /><br />
+    <Image class="trophy-image" src={trophyImage} alt="Trophy" />
+    <div class="text">
+      <h3>About Us</h3>
+      <p>
+        Founded in 2004, Hardwicke is one of the top football teams in Dublin
+        City Center playing in the Premier A division in the AUL. We are based
+        in Hardwicke Street flats in Dublin 1 in the north inner-city and play
+        our matches in Dublin Port Stadium (Stella Maris).<br />
+        <br />Winning the league in the 2021/2022 season, Hardwicke have many
+        accomplishments as an inner-city football club and we bring brilliance
+        to the pitch every single game we play. Hardwicke will continue to
+        deliver excellence with our very wide range of highly skilled players.<br
+        /><br />Hardwicke have won 10 league titles and 14 cups and continue to
+        push to add more to the tally.<br /><br />
 
-       We train twice a week and our matches are on Fridays.
-    </p>
+         We train twice a week and our matches are on Fridays.
+      </p>
+    </div>
   </div>
-</div>
+</header>
 <style>
   .container {
     background-color: var(--main-color);
@@ -55,9 +57,8 @@ import trophyImage from "../images/trophy-about-us.png";
   @media only screen and (min-width: 1000px) {
     .container {
       display: grid;
-      min-height: 600px;
-      max-height: 800px;
-      padding-bottom: 5%;
+      min-height: 750px;
+      margin-bottom: 5%;
       grid-template-columns: repeat(9, 1fr);
       grid-template-rows: repeat(5, 100px);
     }
@@ -73,6 +74,7 @@ import trophyImage from "../images/trophy-about-us.png";
       grid-row-start: 1;
       grid-row-end: 2;
     }
+
     .trophy-image {
       grid-column-start: 1;
       grid-column-end: 3;

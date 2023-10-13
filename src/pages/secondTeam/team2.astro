@@ -3,27 +3,41 @@ import Layout from "../../layouts/Layout.astro";
 import Footer from "../../components/Footer.astro";
 import { Image } from "astro:assets";
 import Cup from "../../images/trophysymbol.png";
+import TeamImage from "../../images/2nd Team.png";
 ---
 
 <Layout title="Second Team" />
 <header>
   <div class="header">
-    <h1>Our Second Team</h1>
+    <h3>Our Second Team</h3>
     <Image class="cup" src={Cup} alt="Hardwicke Second Team" />
-  </div>
+    <!---Text Section -->
+    <div class="content">
+      <p>
+        Playing out of the AUL Saturday and the AUL Sunday, our second team has
+        some bright talents figthing for a position in our first team. The
+        second team faces top clubs like Clontarf FC and Blanchardstown Athletic
+        FC. Winning 13 games out of a possible 21 in the 22/23 season saw them
+        in third place when the league came to an end.<br /><br />
 
-  <div class="content">
-    <p>
-      Playing out of the AUL Saturday and the AUL Sunday, our second team has
-      some bright talents figthing for a position in our first team. The second
-      team faces top clubs like Clontarf FC and Blanchardstown Athletic FC.
-      Winning 13 games out of a possible 21 this season see's them in third
-      place with the league coming to an end.<br /><br />
-
-       Head over to our facebook for live updates on all of our games for the first
-      and second team :
-    </p>
+         Head over to our facebook for live updates on all of our games for the first
+        and second team :<br /><br />
+        <span
+          ><a href="https://www.facebook.com/hardwicke.fc.9"
+            >Check out our Facebook page</a
+          ></span
+        >
+      </p>
+    </div>
   </div>
+  <!---Image Section -->
+  <section>
+    <div class="image">
+      <Image class="teamImage" src={TeamImage} alt="Second Team Picture" />
+    </div>
+
+    <p class="sponsor">Match Day Sponsor : The Wellignton Pub</p>
+  </section>
 </header>
 <Footer />
 
@@ -41,7 +55,7 @@ import Cup from "../../images/trophysymbol.png";
     margin-top: 5%;
     margin-bottom: 5%;
   }
-  h1 {
+  h3 {
     color: var(--text-color-dark);
   }
   .cup {
@@ -51,5 +65,69 @@ import Cup from "../../images/trophysymbol.png";
 
   p {
     color: var(--text-color-dark);
+  }
+
+  .content {
+    padding: 0%;
+  }
+  .image {
+    display: flex;
+  }
+  .teamImage {
+    width: 80%;
+    height: auto;
+    border: solid 5px var(--secondary-color);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0%;
+    margin-top: 10%;
+  }
+
+  section {
+    background-color: var(--main-color);
+    padding-bottom: 5%;
+  }
+
+  .sponsor {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color-light);
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  /*Media Query*/
+
+  @media only screen and (min-width: 1000px) {
+    .header {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(5, 100px);
+    }
+
+    .cup {
+      display: grid;
+      grid-column-start: 6;
+      grid-column-end: 8;
+      grid-row-start: 2;
+      grid-row-end: 5;
+      width: 100%;
+      height: auto;
+    }
+
+    h3 {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      width: 100%;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+    .content {
+      grid-column-start: 1;
+      grid-column-end: 6;
+      grid-row-start: 2;
+      grid-row-end: 9;
+    }
   }
 </style>
