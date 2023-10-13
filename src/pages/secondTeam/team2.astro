@@ -8,9 +8,11 @@ import TeamImage from "../../images/2nd Team.png";
 
 <Layout title="Second Team" />
 <header>
-  <div class="header">
-    <h3>Our Second Team</h3>
-    <Image class="cup" src={Cup} alt="Hardwicke Second Team" />
+  <div class="container">
+    <div class="header">
+      <h3>Our Second Team</h3>
+      <Image class="cup" src={Cup} alt="Hardwicke Second Team" />
+    </div>
     <!---Text Section -->
     <div class="content">
       <p>
@@ -59,8 +61,9 @@ import TeamImage from "../../images/2nd Team.png";
     color: var(--text-color-dark);
   }
   .cup {
-    width: 25%;
+    width: 40%;
     height: auto;
+    margin: 2%;
   }
 
   p {
@@ -99,12 +102,14 @@ import TeamImage from "../../images/2nd Team.png";
   /*Media Query*/
 
   @media only screen and (min-width: 1000px) {
-    .header {
+    .container {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(5, 100px);
+      grid-template-rows: repeat(6, 100px);
     }
-
+    .header {
+      display: contents;
+    }
     .cup {
       display: grid;
       grid-column-start: 6;
@@ -117,7 +122,7 @@ import TeamImage from "../../images/2nd Team.png";
 
     h3 {
       grid-column-start: 1;
-      grid-column-end: 5;
+      grid-column-end: 4;
       width: 100%;
       grid-row-start: 1;
       grid-row-end: 2;
@@ -126,8 +131,12 @@ import TeamImage from "../../images/2nd Team.png";
     .content {
       grid-column-start: 1;
       grid-column-end: 6;
-      grid-row-start: 2;
-      grid-row-end: 9;
+      grid-row-start: 3;
+      grid-row-end: 7;
+    }
+
+    section {
+      margin-top: 10%;
     }
   }
 </style>
