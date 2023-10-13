@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/Footer.astro";
+import { Image } from "astro:assets";
+import Cup from "../../images/trophysymbol.png";
+---
+
+<Layout title="Second Team" />
+<header>
+  <div class="header">
+    <h1>Our Second Team</h1>
+    <Image class="cup" src={Cup} alt="Hardwicke Second Team" />
+  </div>
+
+  <div class="content">
+    <p>
+      Playing out of the AUL Saturday and the AUL Sunday, our second team has
+      some bright talents figthing for a position in our first team. The second
+      team faces top clubs like Clontarf FC and Blanchardstown Athletic FC.
+      Winning 13 games out of a possible 21 this season see's them in third
+      place with the league coming to an end.<br /><br />
+
+       Head over to our facebook for live updates on all of our games for the first
+      and second team :
+    </p>
+  </div>
+</header>
+<Footer />
+
+<style>
+  header {
+    height: 100%;
+    width: 100%;
+  }
+  .header {
+    display: flex;
+    height: 20%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  h1 {
+    color: var(--text-color-dark);
+  }
+  .cup {
+    width: 25%;
+    height: auto;
+  }
+
+  p {
+    color: var(--text-color-dark);
+  }
+</style>
