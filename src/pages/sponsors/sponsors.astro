@@ -5,6 +5,10 @@ import handshake from "../../images/handshake.png";
 import gd from "../../images/g&d.png";
 import horizon from "../../images/horizon.png";
 import horizonJoinery from "../../images/horizon joinery.png";
+import autovision from "../../images/autovision.png";
+import spar from "../../images/spar.png";
+import gylnns from "../../images/gylnns.png";
+import castleHotel from "../../images/castle hotel.png";
 import { Image } from "astro:assets";
 ---
 
@@ -39,19 +43,20 @@ import { Image } from "astro:assets";
   <section class="sponsors">
     <div class="flexbox-container">
       <div class="flexbox">
+        <!---G&D -->
         <Image class="logo-image" src={gd} alt="G & D Insulation" />
       </div>
       <h2 class="sponsor-name">G&D Insulation</h2>
       <a href="https://www.instagram.com/g_d_insulation/"
         ><p class="sponsor-link">Visit G&D Insulation</p></a
-      >
+      ><!---Horizon windows -->
       <div class="flexbox">
         <Image class="horizon-image" src={horizon} alt="Horizon Windows" />
       </div>
       <h2 class="sponsor-name">Horizon Windows</h2>
       <a href="https://horizonwindows.ie/"
         ><p class="sponsor-link">Visit Horizon Windows</p></a
-      >
+      ><!---Horizon Joinery-->
       <div class="flexbox">
         <Image
           class="joinery-image"
@@ -62,6 +67,42 @@ import { Image } from "astro:assets";
       <h2 class="sponsor-name">INHOUZZ Bespoke Joinery</h2>
       <a href="https://horizonwindows.ie/"
         ><p class="sponsor-link">Visit INHOUZZ Bespoke Joinery</p></a
+      >
+      <!---Auto Vision-->
+      <div class="flexbox">
+        <Image
+          class="autovision-image"
+          src={autovision}
+          alt="AutoVision Motors"
+        />
+      </div>
+      <h2 class="sponsor-name">AutoVision</h2>
+      <a href="https://www.autovisiondublin.ie/"
+        ><p class="sponsor-link">Visit AutoVision</p></a
+      >
+      <!---Spar-->
+      <div class="flexbox">
+        <Image class="spar-image" src={spar} alt="Horizon Joinery" />
+      </div>
+      <h2 class="sponsor-name">Spar Dorset Street</h2>
+      <a href="https://horizonwindows.ie/"
+        ><p class="sponsor-link">Visit Spar</p></a
+      >
+      <!---Gylnns Wellington-->
+      <div class="flexbox">
+        <Image class="glynns-image" src={gylnns} alt="The Wellington Pub" />
+      </div>
+      <h2 class="sponsor-name">The Wellington Pub Dorset Street</h2>
+      <a href="https://dublinsessions.ie/"
+        ><p class="sponsor-link">Visit The Wellington</p></a
+      >
+      <!---Castle Hotel-->
+      <div class="flexbox">
+        <Image class="gylnns-image" src={castleHotel} alt="The Castlr Hotel " />
+      </div>
+      <h2 class="sponsor-name">The Castle Hotel</h2>
+      <a href="https://horizonwindows.ie/"
+        ><p class="sponsor-link">Visit The Castlele Hotel</p></a
       >
     </div>
   </section>
@@ -88,6 +129,7 @@ import { Image } from "astro:assets";
   .sponsor-name {
     color: var(--text-color-light);
     margin-bottom: 3%;
+    text-align: center;
   }
 
   .sponsor-link {
@@ -125,7 +167,7 @@ import { Image } from "astro:assets";
 
   .flexbox {
     margin-top: 10%;
-    margin-bottom: 3%;
+    margin-bottom: 10%;
     width: 280px;
     height: 260px;
     display: flex;
