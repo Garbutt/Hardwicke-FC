@@ -44,7 +44,7 @@ import { Image } from "astro:assets";
     <div class="flexbox-container">
       <div class="flexbox">
         <!---G&D -->
-        <Image class="logo-image" src={gd} alt="G & D Insulation" />
+        <Image class="gd-image" src={gd} alt="G & D Insulation" />
       </div>
       <h2 class="sponsor-name">G&D Insulation</h2>
       <a href="https://www.instagram.com/g_d_insulation/"
@@ -101,8 +101,8 @@ import { Image } from "astro:assets";
         <Image class="gylnns-image" src={castleHotel} alt="The Castlr Hotel " />
       </div>
       <h2 class="sponsor-name">The Castle Hotel</h2>
-      <a href="https://horizonwindows.ie/"
-        ><p class="sponsor-link">Visit The Castlele Hotel</p></a
+      <a href="https://www.castle-hotel.ie/"
+        ><p class="sponsor-link">Visit The Castle Hotel</p></a
       >
     </div>
   </section>
@@ -187,6 +187,7 @@ import { Image } from "astro:assets";
     height: 70%;
     width: auto;
   }
+
   /*Media Query*/
 
   @media only screen and (min-width: 1000px) {
@@ -227,6 +228,29 @@ import { Image } from "astro:assets";
 
     section {
       margin-top: 10%;
+    }
+    .sponsors {
+      padding-bottom: 0.1%;
+    }
+    .flexbox-container {
+      padding-top: 5%;
+      padding-bottom: 5%;
+    }
+    .flexbox {
+      width: 500px;
+      height: 500px;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+
+    .gd-image {
+      width: 80%;
+      height: auto;
+    }
+
+    .glynns-image {
+      width: 100%;
+      height: auto;
     }
   }
 </style>
