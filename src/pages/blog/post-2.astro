@@ -20,11 +20,12 @@ import Footer from "../../components/Footer.astro";
       src={postImage}
       alt="Hardwicke celebrating winning the treble"
     />
-    <p>
+    <p class="text">
       Hardwicke FC win the treble in 2023 after a nail biting seasons. Starting
       of with the Liddy Cup were Hardwicke won 6-5 on penos and Ryan King led
       them to victory
     </p>
+    <a href="/blog/blog.html"><button>Return To Blogs</button></a>
   </div>
 </header>
 <Footer />
@@ -49,5 +50,9 @@ import Footer from "../../components/Footer.astro";
     border: solid 5px var(--secondary-color);
     margin-left: auto;
     margin-right: auto;
+  }
+
+  a {
+    text-decoration: none;
   }
 </style>

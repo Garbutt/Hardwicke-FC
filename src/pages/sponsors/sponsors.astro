@@ -22,19 +22,11 @@ import { Image } from "astro:assets";
     <!---Text Section -->
     <div class="content">
       <p>
-        Playing out of the AUL Saturday and the AUL Sunday, our second team has
-        some bright talents figthing for a position in our first team. The
-        second team faces top clubs like Clontarf FC and Blanchardstown Athletic
-        FC. Winning 13 games out of a possible 21 in the 22/23 season saw them
-        in third place when the league came to an end.<br /><br />
-
-         Head over to our facebook for live updates on all of our games for the first
-        and second team :<br /><br />
-        <span
-          ><a href="https://www.facebook.com/hardwicke.fc.9"
-            >Check out our Facebook page</a
-          ></span
-        >
+        Hardwicke is supported by many local businesses who help the team to
+        continue to thrive and stay on top of the league. We are greatful for
+        our sponsors and are always promoting thier businesses which also helps
+        them. Want to become a sponsor for our team? Get into contact with us
+        and we will help promote your business!
       </p>
     </div>
   </div>
@@ -105,6 +97,7 @@ import { Image } from "astro:assets";
         ><p class="sponsor-link">Visit The Castle Hotel</p></a
       >
     </div>
+    <a href="../index.html"><button>Return Home</button></a>
   </section>
 </header>
 <Footer />
@@ -178,6 +171,7 @@ import { Image } from "astro:assets";
     align-items: center;
     justify-content: center;
     background-color: var(--third-color);
+    border: solid 5px var(--secondary-color);
   }
   .horizon-image {
     height: 65%;
@@ -187,7 +181,9 @@ import { Image } from "astro:assets";
     height: 70%;
     width: auto;
   }
-
+  a {
+    text-decoration: none;
+  }
   /*Media Query*/
 
   @media only screen and (min-width: 1000px) {
@@ -205,8 +201,8 @@ import { Image } from "astro:assets";
       display: grid;
       grid-column-start: 6;
       grid-column-end: 8;
-      grid-row-start: 2;
-      grid-row-end: 5;
+      grid-row-start: 3;
+      grid-row-end: 7;
       width: 100%;
       height: auto;
     }
