@@ -7,10 +7,11 @@ const description = "Hardwicke FC win the treble with a nail biting season.";
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import Footer from "../../components/Footer.astro";
+import BlogLayout from "../../layouts/BlogLayout.astro";
 ---
 
 <Layout title="Hardwicke FC Win The Treble" />
-
+<BlogLayout />
 <header class="container">
   <div class="content">
     <h2 class="heading">{title}</h2>
@@ -29,33 +30,3 @@ import Footer from "../../components/Footer.astro";
   </div>
 </header>
 <Footer />
-<style>
-  .heading {
-    color: var(--main-color);
-    text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 5%;
-  }
-
-  .text {
-    text-align: center;
-    color: var(--text-color-dark);
-  }
-
-  .image {
-    display: flex;
-    width: 80%;
-    height: auto;
-    border: solid 5px var(--secondary-color);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  button {
-  }
-
-  a {
-    text-decoration: none;
-  }
-</style>

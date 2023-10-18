@@ -1,5 +1,5 @@
 ---
-const title = "Hardwicke FC win the Treble";
+const title = "AUL";
 const date = "09/10/2023";
 const author = "Anthony Perry";
 import postImage from "../../../src/images/aul-uncut.png";
@@ -7,52 +7,32 @@ const description = "Hardwicke FC win the treble with a nail biting season.";
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import Footer from "../../components/Footer.astro";
+import BlogLayout from "../../layouts/BlogLayout.astro";
 ---
 
 <Layout title="Hardwicke FC Win The Treble" />
+<BlogLayout />
 
 <header class="container">
   <div class="content">
     <h2 class="heading">{title}</h2>
     <p class="text">by {author} • {date}</p>
-    <Image
-      class="image"
-      src={postImage}
-      alt="Hardwicke celebrating winning the treble"
-    />
+    <Image class="image" src={postImage} alt="Athletic Union League" />
     <p class="text">
-      Hardwicke FC win the treble in 2023 after a nail biting seasons. Starting
-      of with the Liddy Cup were Hardwicke won 6-5 on penos and Ryan King led
-      them to victory
+      Hardwicke FC are proud to be part of the AUL football league, a league
+      based in Dublin with top talents from around the county. It is one of the
+      biggest football junior leagues in ireland and on its last count there
+      wore approximately 130 teams and 4,000 players throughout all of its
+      leagues. We, at Hardwicke are proud of our relatioship with the Athletic
+      Union League and plan on continuing this relationship for many years to
+      come. <br /><br />
+      <span
+        ><a href="http://www.aul.ie/homepage.aspx?oid=1001"
+          >Visit the official AUL page</a
+        ></span
+      >
     </p>
     <a href="/blog/blog.html"><button>Return To Blogs</button></a>
   </div>
 </header>
 <Footer />
-<style>
-  .heading {
-    color: var(--main-color);
-    text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 5%;
-  }
-
-  .text {
-    text-align: center;
-    color: var(--text-color-dark);
-  }
-
-  .image {
-    display: flex;
-    width: 80%;
-    height: auto;
-    border: solid 5px var(--secondary-color);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  a {
-    text-decoration: none;
-  }
-</style>
