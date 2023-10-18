@@ -90,7 +90,7 @@ import { Image } from "astro:assets";
       >
       <!---Castle Hotel-->
       <div class="flexbox">
-        <Image class="gylnns-image" src={castleHotel} alt="The Castlr Hotel " />
+        <Image class="castle-image" src={castleHotel} alt="The Castlr Hotel " />
       </div>
       <h2 class="sponsor-name">The Castle Hotel</h2>
       <a href="https://www.castle-hotel.ie/"
@@ -171,7 +171,7 @@ import { Image } from "astro:assets";
     align-items: center;
     justify-content: center;
     background-color: var(--third-color);
-    border: solid 5px var(--secondary-color);
+    border: solid 10px var(--secondary-color);
   }
   .horizon-image {
     height: 65%;
@@ -184,6 +184,27 @@ import { Image } from "astro:assets";
   a {
     text-decoration: none;
   }
+
+  .autovision-image {
+    width: 80%;
+    height: auto;
+  }
+
+  .spar-image {
+    width: 80%;
+    height: auto;
+  }
+
+  .glynns-image {
+    width: 90%;
+    height: auto;
+  }
+
+  .castle-image {
+    width: 80%;
+    height: auto;
+  }
+
   /*Media Query*/
 
   @media only screen and (min-width: 1000px) {
