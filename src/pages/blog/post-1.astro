@@ -3,6 +3,7 @@ const title = "Hardwicke FC win the Treble";
 const date = "09/10/2023";
 const author = "Anthony Perry";
 import postImage from "../../../src/images/blog-post-1-uncut.png";
+import rewardsNight from "../../../src/images/rewards-night.png";
 const description = "Hardwicke FC win the treble with a nail biting season.";
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
@@ -28,6 +29,12 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
       years. This ultimately led to Hardwicke FC winning the club of the year
       for the 22/23 season.
     </p>
+    <Image
+      class="image"
+      src={rewardsNight}
+      alt="Hardwicke FC collecting Rewards"
+      style="margin-bottom: 5%;"
+    />
     <a href="/blog/blog.html"><button>Return To Blogs</button></a>
   </div>
 </header>
