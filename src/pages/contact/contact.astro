@@ -16,7 +16,7 @@ import contactImage from "../../images/blog-post-1-uncut.png";
     </div>
     <!---Text Section -->
     <div class="content">
-      <p>
+      <p class="text-dark">
         Are you looking to get in contact? Great! Our phone number and E-mail
         are listed below and we usually get back in touch fast. We look forward
         to hearing from you!
@@ -32,6 +32,7 @@ import contactImage from "../../images/blog-post-1-uncut.png";
       <p>Phone Number : <span>087 342 5387</span></p>
       <p>E-Mail : <span>Hardwickefc@gmail.com</span></p>
     </div>
+    <button>Return Home</button>
   </section>
 </header>
 <footer><Footer /></footer>
@@ -58,7 +59,7 @@ import contactImage from "../../images/blog-post-1-uncut.png";
     margin: 4%;
   }
 
-  p {
+  .text-dark {
     color: var(--text-color-dark);
   }
 
@@ -72,7 +73,7 @@ import contactImage from "../../images/blog-post-1-uncut.png";
   .teamImage {
     width: 80%;
     height: auto;
-    border: solid 5px var(--secondary-color);
+    border: solid 5px var(--third-color);
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0%;
@@ -87,10 +88,69 @@ import contactImage from "../../images/blog-post-1-uncut.png";
   h2 {
     color: var(--text-color-light);
     text-align: center;
+    margin-top: 5%;
   }
 
   p {
     color: var(--text-color-light);
     text-align: center;
+  }
+
+  .contact-info {
+    border: solid 5px var(--third-color);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+
+  /*Media Query*/
+
+  @media only screen and (min-width: 1000px) {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(4, 100px);
+    }
+    .header {
+      display: contents;
+    }
+    .contact {
+      display: grid;
+      grid-column-start: 6;
+      grid-column-end: 8;
+      grid-row-start: 2;
+      grid-row-end: 5;
+      width: 100%;
+      height: auto;
+    }
+
+    h3 {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      width: 100%;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+    .content {
+      grid-column-start: 1;
+      grid-column-end: 6;
+      grid-row-start: 3;
+      grid-row-end: 7;
+    }
+
+    section {
+      margin-top: 10%;
+    }
+
+    .contact-info {
+      width: 50%;
+    }
   }
 </style>
