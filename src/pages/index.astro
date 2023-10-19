@@ -9,29 +9,31 @@ import backgroundImage from "../images/background-image.png";
 ---
 
 <Layout title="Hardwicke FC" />
-<!---Top of home page -->
-<div class="container">
-  <div class="gap-for-text">
-    <h1>Hardwicke Football Club</h1>
-  </div>
+<header>
+  <!---Top of home page -->
+  <div class="container">
+    <div class="gap-for-text">
+      <h1>Hardwicke Football Club</h1>
+    </div>
 
-  <div class="image">
-    <Image
-      class="main-background-image"
-      src={backgroundImage}
-      alt="Hardwicke FC first team"
-    />
-    <div class="gap-for-text"><h1>Est 2004!</h1></div>
+    <div class="image">
+      <Image
+        class="main-background-image"
+        src={backgroundImage}
+        alt="Hardwicke FC first team"
+      />
+      <div class="gap-for-text"><h1>Est 2004!</h1></div>
+    </div>
   </div>
-</div>
-<!---About Us -->
-<About />
-<!---Liddy Cup Winners -->
-<LiddyCup />
-<!---Our Coaches -->
-<Coaches />
+  <!---About Us -->
+  <About />
+  <!---Liddy Cup Winners -->
+  <LiddyCup />
+  <!---Our Coaches -->
+  <Coaches />
+</header>
 <!---Footer -->
-<Footer />
+<footer><Footer /></footer>
 <style>
   .container {
     width: 100%;
