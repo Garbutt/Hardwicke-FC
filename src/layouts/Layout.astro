@@ -5,15 +5,13 @@ interface Props {
 
 const { title } = Astro.props;
 import Nav from "../components/Nav.astro";
-import { Image } from "astro:assets";
-import logo from "../images/Hardwicke Logo.png";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content="The Home Of Football" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,11 +20,8 @@ import logo from "../images/Hardwicke Logo.png";
       href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="../../public/Hardwicke Logo.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
     <title>{title}</title>
   </head>
   <body
