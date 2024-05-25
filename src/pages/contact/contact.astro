@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Footer from "../../components/Footer.astro";
 import { Image } from "astro:assets";
-import ContactUs from "../../images/contact us.png";
+import phoneIcon from "../../images/phone-call.png";
 import contactImage from "../../images/team-celebrating.png";
 ---
 
@@ -12,26 +12,31 @@ import contactImage from "../../images/team-celebrating.png";
   <div class="container">
     <div class="header">
       <h3>Contact Us</h3>
-      <Image class="contact" src={ContactUs} alt="Hardwicke Second Team" />
+  
     </div>
     <!---Text Section -->
-    <div class="content">
-      <p class="text-dark">
-        Are you looking to get in contact? Great! Our phone number and E-mail
-        are listed below and we usually get back in touch fast. We look forward
-        to hearing from you!
-      </p>
+    <div class="contact-container">
+      <div class="content">
+        <p class="text-dark">
+          Are you looking to get in contact? Great! Our phone number and E-mail
+          are listed below and we usually get back in touch fast. We look forward
+          to hearing from you!
+        </p>
+        <Image class="phoneIcon" src={phoneIcon} alt="Hardwicke Second Team" />
+      </div>
     </div>
   </div>
   <section>
     <div class="image">
-      <Image class="teamImage" src={contactImage} alt="Hardwicke Contact Us" />
+      <div class="contact-info">
+        <span class="overlay">
+          <h2>Contact Information</h2>
+        <p>Phone Number : <br /><span>087 342 5387</span></p>
+        <p>E-Mail : <br /><span>Hardwickefc@gmail.com</span></p>
+        </span>
+      </div>
     </div>
-    <div class="contact-info">
-      <h2>Contact Information</h2>
-      <p>Phone Number : <br /><span>087 342 5387</span></p>
-      <p>E-Mail : <br /><span>Hardwickefc@gmail.com</span></p>
-    </div>
+   
     <a href="../../index.html"><button>Return Home</button></a>
   </section>
 </header>
@@ -52,26 +57,47 @@ import contactImage from "../../images/team-celebrating.png";
   }
   h3 {
     color: var(--text-color-dark);
+    text-align: center;
   }
-  .contact {
-    width: 30%;
-    height: auto;
-    margin: 4%;
+  .phoneIcon {
+    width: 90%;
+    max-width: 200px;
+    height: 100%;
+    padding: 2em;
   }
 
   .text-dark {
     color: var(--text-color-dark);
   }
 
+.contact-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em 0;
+}
+
   .content {
-    padding: 0%;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+    background-color: var(--transparent-background);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
   .image {
     display: flex;
+    width: 100%;
+   
   }
   .teamImage {
     width: 80%;
+    max-width: 1200px;
     height: auto;
     border: solid 5px var(--third-color);
     margin-left: auto;
@@ -82,28 +108,54 @@ import contactImage from "../../images/team-celebrating.png";
 
   section {
     background-color: var(--main-color);
-    padding-bottom: 5%;
+    padding-bottom: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
   }
 
   h2 {
-    color: var(--text-color-light);
     text-align: center;
-    margin-top: 5%;
+
   }
 
   p {
-    color: var(--text-color-light);
     text-align: center;
   }
 
   .contact-info {
     border: solid 5px var(--third-color);
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8%;
-    margin-bottom: 5%;
+    max-width: 1200px;
+    margin: 2em auto;
+
+    color: var(--text-color-light);
+    background-image: url("/team-celebrating.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+
+  .overlay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    
+    text-decoration: none;
+    background: var(--transparent-background-darker);
+    z-index: 1;
+  }
+
+  .overlay p{
+    margin: 0;
+    padding: 2em 0 0 0;
+  }
+
 
   span {
     text-decoration: underline;
@@ -115,45 +167,21 @@ import contactImage from "../../images/team-celebrating.png";
   /*Media Query*/
 
   @media only screen and (min-width: 1000px) {
-    .container {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(4, 100px);
-    }
+  
     .header {
       display: contents;
-    }
-    .contact {
-      display: grid;
-      grid-column-start: 6;
-      grid-column-end: 8;
-      grid-row-start: 2;
-      grid-row-end: 5;
-      width: 80%;
-      height: auto;
-    }
-
-    h3 {
-      grid-column-start: 1;
-      grid-column-end: 4;
-      width: 100%;
-      grid-row-start: 1;
-      grid-row-end: 2;
-    }
-
-    .content {
-      grid-column-start: 1;
-      grid-column-end: 6;
-      grid-row-start: 3;
-      grid-row-end: 7;
     }
 
     section {
       margin-top: 10%;
     }
 
-    .contact-info {
-      width: 50%;
+    .content{
+      flex-direction: row;
+    }
+
+    .phoneIcon{
+      margin: 2em;
     }
   }
 </style>
